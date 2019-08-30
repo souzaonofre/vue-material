@@ -98,7 +98,7 @@
           const tdEls = this.MdTable.contentEl.querySelectorAll('tr:first-child .' + cellSelector)
           const nodeIndex = this.getNodeIndex(thEls, this.$el)
 
-          this.width = tdEls[nodeIndex].offsetWidth
+          this.width = (tdEls && tdEls.length > 0) ? tdEls[nodeIndex].offsetWidth : 0
         }
       }
     },
